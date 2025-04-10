@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Akira;
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("/fonts/akira-expanded.otf") format("opentype");
+}
+
+:root {
+  --neon: #39ff14;
+
+  --neon-from: #adff2f;
+  --neon-via: #39ff14;
+  --neon-to: #00ff00;
+
+  --card: #1a1a1a;
+  --bg: #000000;
+  --fg: #f5f5f5;
+
+  --font-base: "Montserrat", sans-serif;
+  --font-display: "Akira", sans-serif;
+}
+
+/* Example global styles */
+html,
+body {
+  @apply font-base bg-bg text-fg overflow-x-hidden;
+}
+
+/* If you want a subtle starfield or abstract pattern in the background:
+   You can place a background image or gradient here. */
+body {
+  background: radial-gradient(circle at 50% 50%, #0f0f0f 0%, #000 100%);
+}
+
+* {
+  @apply leading-[150%];
+}
+
+h1,
+h2 {
+  @apply font-display font-semibold leading-[100%];
+}
+
+h1,
+.h1 {
+  @apply text-[15.5vw] md:text-[5.5vw] lg:text-[7.5vw];
+}
+
+h2,
+.h2 {
+  @apply text-[10vw] md:text-[5.5vw] lg:text-[3.75vw];
+}
+
+h3 {
+  @apply text-[6vw] md:text-[3vw] lg:text-[2vw];
+}
+
+.icon-text {
+  @apply text-[5vw] md:text-[2.5vw] lg:text-[1.5vw];
+}
+
+p,
+a,
+button,
+input,
+.p,
+div {
+  @apply text-[4.25vw] md:text-[2vw] lg:text-[1.1vw] leading-[150%] font-medium;
+}
+
+.container-x {
+  @apply px-1 md:px-4 lg:px-5;
+}
+
+.container-y {
+  @apply py-5;
+}
+
+.container-x {
+  @apply px-1 md:px-4 lg:px-5 py-5;
+}
+
+.flex-center {
+  @apply flex justify-center items-center gap-2;
+}
+
+.flex-v-center {
+  @apply flex items-center gap-2;
+}
+
+.flex-between {
+  @apply flex justify-between items-center gap-2;
+}
+
+/* .grid-2 {
+	@apply grid grid-cols-1 lg:grid-cols-2 gap-1;
+} */
+
+.show-md {
+  @apply hidden md:flex;
+}
+
+.show-lg {
+  @apply hidden lg:flex;
+}
+
+.show-xl {
+  @apply hidden xl:flex;
+}
+
+.hide-md {
+  @apply md:hidden;
+}
+
+.hide-lg {
+  @apply lg:hidden;
+}
+
+.hide-xl {
+  @apply xl:hidden;
+}
