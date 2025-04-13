@@ -33,7 +33,9 @@ h3 {
 .neon-gradient,
 .card-gradient,
 .dark-gradient,
+.dark-gradient-2,
 .light-gradient,
+.jumbotron,
 .tag {
   background: var(--to);
   background: linear-gradient(-90deg, var(--from) 0%, var(--to) 100%);
@@ -54,6 +56,13 @@ h3 {
 .dark-gradient {
   --from: var(--dark);
   --to: var(--bg);
+  /* @apply backdrop-filter backdrop-blur-lg; */
+}
+
+.dark-gradient-2,
+.jumbotron {
+  --from: var(--bg);
+  --to: var(--dark);
   /* @apply backdrop-filter backdrop-blur-lg; */
 }
 

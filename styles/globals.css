@@ -114,12 +114,16 @@ div {
 
 .container-x,
 .container {
-  @apply px-[1.5em] md:px-[4em] lg:px-[6em];
+  @apply px-[1.5em] md:px-[4em] lg:px-[6em] !max-w-full;
 }
 
 .container-y,
 .container {
   @apply py-[7em];
+}
+
+.jumbotron {
+  @apply pt-[12em] pb-6 bg-dark flex flex-col items-center justify-center;
 }
 
 .flex-center {
@@ -136,6 +140,11 @@ div {
 
 .max-w-text {
   @apply md:max-w-[70vw] lg:max-w-[60vw];
+}
+
+.max-w-text-2 {
+  /* For Jumbotron */
+  @apply md:max-w-[60vw] lg:max-w-[50vw];
 }
 
 .grid-3 {

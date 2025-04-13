@@ -17,6 +17,7 @@ export { default as MenuPopup } from "./popups/MenuPopup";
 
 // Text
 export { default as Heading } from "./text/Heading";
+export { default as Jumbotron } from "./text/Jumbotron";
 
 // Cards
 export { default as IconTextCard } from "./cards/IconTextCard";

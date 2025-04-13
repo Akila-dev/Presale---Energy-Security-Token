@@ -1,83 +1,47 @@
 import React from "react";
 
-import { Layout } from "../components";
+import { Layout, MeetTheTeam, Heading, Jumbotron } from "../components";
 
 export default function About() {
   return (
     <Layout>
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <h2 className="text-4xl font-bold mb-6">About / Project Overview</h2>
+      {/* Jumbotron */}
+      <Jumbotron page="About" desc="Project Overview" />
 
-        {/* Mission & Vision Section */}
-        <div className="mb-8">
-          <h3 className="text-3xl font-semibold mb-2">Mission & Vision</h3>
-          <p className="text-lg">
+      {/* Mission & Vision Section */}
+      <section className="container grid grid-cols-1 md:grid-cols-7 gap-10">
+        <div className="col-span-1 md:col-span-3">
+          <Heading tag="Our Mission" title="Mission & Vision" left />
+        </div>
+        <p className="col-span-1 md:col-span-4 text-[1.2em] flex flex-col gap-2">
+          <span>
             Our mission is to accelerate the global transition to sustainable
             energy by providing transparent, secure, and accessible investment
-            opportunities. Through the issuance of the Energy Security Token
-            (ERGSEC), we empower investors to directly participate in pioneering
-            renewable energy projects, driving both environmental progress and
-            economic growth.
-          </p>
-        </div>
+            opportunities.
+          </span>
+          <span>
+            Through the issuance of the Energy Security Token (ERGSEC), we
+            empower investors to directly participate in pioneering renewable
+            energy projects, driving both environmental progress and economic
+            growth.
+          </span>
+        </p>
+      </section>
 
-        {/* Team & Advisors Section */}
-        <div className="mb-8">
-          <h3 className="text-3xl font-semibold mb-2">Team & Advisors</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {/* CEO Card */}
-            <div className="flex flex-col items-center">
-              <img
-                src="/images/team-cto.webp"
-                alt="CTO"
-                className="w-32 h-32 object-cover rounded-full mb-4"
-              />
-              <h4 className="text-xl font-semibold">CTO Name</h4>
-              <p className="text-gray-400 text-center">
-                Master's in Technology, 25+ years business experience
-              </p>
-            </div>
-            {/* CFO Card */}
-            <div className="flex flex-col items-center">
-              <img
-                src="/images/team-cfo.webp"
-                alt="CFO"
-                className="w-32 h-32 object-cover rounded-full mb-4"
-              />
-              <h4 className="text-xl font-semibold">CFO Name</h4>
-              <p className="text-gray-400 text-center">
-                MBA, 25+ years business management experience
-              </p>
-            </div>
-            {/* CCO Card */}
-            <div className="flex flex-col items-center">
-              <img
-                src="/images/team-cco.webp"
-                alt="CCO"
-                className="w-32 h-32 object-cover rounded-full mb-4"
-              />
-              <h4 className="text-xl font-semibold">Security Expert</h4>
-              <p className="text-gray-400 text-center">
-                MBA, 15+ years crypto & cybersecurity experience
-              </p>
-            </div>
-          </div>
-        </div>
+      {/* Team & Advisors Section */}
+      <section className="container-x">
+        <MeetTheTeam />
+      </section>
 
-        {/* Partnerships Section */}
-        <div>
-          <h3 className="text-3xl font-semibold mb-2">Partnerships</h3>
-          <p className="text-lg mb-4">
-            We partner with leading organizations in renewable energy and
+      {/* Partnerships Section */}
+      <section className="container">
+        <Heading
+          tag="Our Partners"
+          title="Partnerships"
+          desc="We partner with leading organizations in renewable energy and
             blockchain technology to drive sustainable growth, improve ESG
-            outcomes, and ensure secure, transparent profit distribution.
-          </p>
-          <img
-            src="/images/partner-logos.webp"
-            alt="Partner Logos"
-            className="w-full object-contain"
-          />
-        </div>
+            outcomes, and ensure secure, transparent profit distribution."
+        />
       </section>
     </Layout>
   );
