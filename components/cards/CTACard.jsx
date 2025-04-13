@@ -11,7 +11,7 @@ const CTACard = ({ title, desc, buttons }) => {
         style={{ backgroundImage: "url('/images/bg-lines.png')" }}
       >
         <div className="light-gradient absolute w-[30vw] h-[30vw] -top-3/4 left-1/2 -translate-x-1/2 rounded-full opacity-30 blur-3xl" />
-        <div className="px-2 py-5 lg:p-10 flex-center flex-col !items-start md:!items-center gap-2 md:text-center backdrop-blur-sm">
+        <div className="px-3 py-5 lg:p-10 flex-center flex-col !items-start md:!items-center gap-2 md:text-center backdrop-blur-sm">
           <h2 className="capitalize max-w-text">{title}</h2>
           <p className="max-w-text">{desc}</p>
           <div className="flex-v-center flex-col md:flex-row pt-1">

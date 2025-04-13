@@ -26,3 +26,6 @@ export { default as TeamCard } from "./cards/TeamCard";
 
 // Sections
 export { default as MeetTheTeam } from "./sections/MeetTheTeam";
+
+// Icons
+export { default as NeonGradientIcon } from "./icons/NeonGradientIcon";
