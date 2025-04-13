@@ -12,7 +12,7 @@ const Heading = ({ tag, title, desc, left }) => {
           left ? "!items-start text-left" : "!items-center text-center"
         }`}
       >
-        <div className="dark-gradient py-1 px-2 rounded">
+        <div className="dark-gradient py-1 px-2 rounded border border-dark">
           <p className="uppercase text-gradient font-semibold">{tag}</p>
         </div>
         <h2>{title}</h2>

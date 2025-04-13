@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const TeamCard = ({ img, name, position, education, experience }) => {
   return (
-    <div className="space-y-3 p-3 dark-gradient rounded-lg shadow shadow-card">
+    <div className="gsap-card-single space-y-3 p-3 dark-gradient rounded-lg shadow shadow-card">
       {/* Image */}
 
       <Image
@@ -15,11 +15,9 @@ const TeamCard = ({ img, name, position, education, experience }) => {
       />
       {/* Text */}
       <div className="flex flex-col gap-1 items-start">
-        <div className="flex-v-center">
+        <div className="flex-v-center flex-wrap">
           <h4>{name}</h4>
-          <p className="neon-gradient text-bg font-semibold rounded uppercase py-[0.3em] px-2">
-            {position}
-          </p>
+          <p className="tag">{position}</p>
         </div>
         <p>
           {education}, {experience}

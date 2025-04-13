@@ -8,7 +8,7 @@ import {
   IconTextCard,
   CTACard,
   ContactCTACard,
-  TeamCard,
+  MeetTheTeam,
 } from "../components";
 import text_data from "../text_data";
 
@@ -54,26 +54,7 @@ export default function Home() {
       </section>
       {/* ! MEET THE TEAM */}
       <section className="container">
-        <div className="bg-dark rounded-md overflow-clip">
-          <div className="px-3 pt-7 md:px-7 pb-[8em] bg-card rounded-b-md">
-            <Heading tag="Meet The Team" title="Our Visionaries" left />
-          </div>
-          <div className="gsap-card-group px-3 md:px-7 pb-7 -mt-12 grid-3">
-            {text_data.TEAM_DATA.map(
-              ({ name, role, img, position, education, experience }, i) => (
-                <TeamCard
-                  key={i}
-                  name={name}
-                  role={role}
-                  img={img}
-                  position={position}
-                  education={education}
-                  experience={experience}
-                />
-              )
-            )}
-          </div>
-        </div>
+        <MeetTheTeam showAboutLink />
       </section>
       {/* ! CONTACT US CALL TO ACTION */}
       <section className="container-x">

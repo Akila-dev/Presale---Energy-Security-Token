@@ -20,9 +20,9 @@
   --neon-via: #39ff14;
   --neon-to: #00ff00;
 
-  --dark: #0a0a0a;
+  --dark: #1a1a1a;
   --light: #575757;
-  --card: #980a0a;
+  --card: #343434;
   --bg: #000000;
   --fg: #dedede;
 
@@ -75,7 +75,7 @@ h3 {
 }
 
 h4 {
-  @apply text-[6vw] md:text-[3vw] lg:text-[1.5vw] font-semibold;
+  @apply text-[5vw] md:text-[2.5vw] lg:text-[1.5vw] font-semibold;
 }
 
 .card-title {
@@ -100,7 +100,12 @@ div {
 }
 
 .sm {
-  @apply font-base text-[3vw] md:text-[1.4vw] lg:text-[0.7vw] leading-[150%];
+  @apply text-[3vw] md:text-[1.4vw] lg:text-[0.7vw] leading-[150%];
+}
+
+.tag {
+  /* E.g Team Members tag */
+  @apply text-[3vw] md:text-[1.6vw] lg:text-[0.85vw] leading-[150%] text-bg font-semibold rounded uppercase py-[0.3em] px-2;
 }
 
 .container-x,
@@ -110,7 +115,7 @@ div {
 
 .container-y,
 .container {
-  @apply py-[5em];
+  @apply py-[7em];
 }
 
 .flex-center {
