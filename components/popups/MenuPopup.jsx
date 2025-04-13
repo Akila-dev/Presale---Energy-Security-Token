@@ -52,7 +52,7 @@ const MenuPopup = ({ close, container }) => {
             <div key={id} className="col-span-1">
               <Link
                 href={item.url}
-                className={`block uppercase sm link ${
+                className={`block uppercase link ${
                   pathname === item.url ? "font-bold text-gradient" : "text-fg"
                 }`}
               >
