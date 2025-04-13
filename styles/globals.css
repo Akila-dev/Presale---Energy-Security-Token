@@ -74,6 +74,10 @@ h3 {
   @apply text-[6vw] md:text-[3vw] lg:text-[2vw];
 }
 
+h4 {
+  @apply text-[6vw] md:text-[3vw] lg:text-[1.5vw] font-semibold;
+}
+
 .card-title {
   @apply text-[6vw] md:text-[3vw] lg:text-[1.8vw] font-semibold;
 }
@@ -125,9 +129,9 @@ div {
   @apply md:max-w-[70vw] lg:max-w-[60vw];
 }
 
-/* .grid-2 {
-	@apply grid grid-cols-1 lg:grid-cols-2 gap-1;
-} */
+.grid-3 {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 w-full items-stretch;
+}
 
 .show-md {
   @apply hidden md:flex;

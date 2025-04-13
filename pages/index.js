@@ -8,6 +8,7 @@ import {
   IconTextCard,
   CTACard,
   ContactCTACard,
+  TeamCard,
 } from "../components";
 import text_data from "../text_data";
 
@@ -23,7 +24,7 @@ export default function Home() {
           title="Why Choose Our Project?"
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
-        <div className="gsap-card-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 w-full items-stretch">
+        <div className="gsap-card-group grid-3">
           {text_data.WHY_CHOOSE_US.map(({ icon, title, desc }, i) => (
             <IconTextCard key={i} icon={icon} title={title} desc={desc} />
           ))}
@@ -52,7 +53,28 @@ export default function Home() {
         />
       </section>
       {/* ! MEET THE TEAM */}
-      <section className="container">Meet the team</section>
+      <section className="container">
+        <div className="bg-dark rounded-md overflow-clip">
+          <div className="px-3 pt-7 md:px-7 pb-[8em] bg-card rounded-b-md">
+            <Heading tag="Meet The Team" title="Our Visionaries" left />
+          </div>
+          <div className="gsap-card-group px-3 md:px-7 pb-7 -mt-12 grid-3">
+            {text_data.TEAM_DATA.map(
+              ({ name, role, img, position, education, experience }, i) => (
+                <TeamCard
+                  key={i}
+                  name={name}
+                  role={role}
+                  img={img}
+                  position={position}
+                  education={education}
+                  experience={experience}
+                />
+              )
+            )}
+          </div>
+        </div>
+      </section>
       {/* ! CONTACT US CALL TO ACTION */}
       <section className="container-x">
         <ContactCTACard />

@@ -22,3 +22,4 @@ export { default as Heading } from "./text/Heading";
 export { default as IconTextCard } from "./cards/IconTextCard";
 export { default as CTACard } from "./cards/CTACard";
 export { default as ContactCTACard } from "./cards/ContactCTACard";
+export { default as TeamCard } from "./cards/TeamCard";

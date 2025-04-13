@@ -10,6 +10,8 @@ import { CONTACT_DETAILS } from "./site_data";
 
 import { WHY_CHOOSE_US } from "./home_text";
 
+import { TEAM_DATA } from "./about.js";
+
 const text_data = {
   NAV_LINKS,
   MOBILE_MAIN_NAV,
@@ -18,6 +20,7 @@ const text_data = {
   // MOBILE_NAV_FOOTER_2,
   CONTACT_DETAILS,
   WHY_CHOOSE_US,
+  TEAM_DATA,
 };
 
 export default text_data;

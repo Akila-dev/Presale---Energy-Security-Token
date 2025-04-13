@@ -17,6 +17,8 @@ module.exports = {
       8: "4em",
       9: "4.5em",
       10: "5em",
+      11: "5.5em",
+      12: "6em",
     },
     borderRadius: {
       none: "0",
