@@ -4,12 +4,8 @@ import Link from "next/link";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import {
-  MOBILE_MAIN_NAV,
-  MOBILE_NAV_FOOTER_1,
-  MOBILE_NAV_FOOTER_2,
-} from "../../constants";
-import { CloseBtn } from "../../components";
+import text_data from "../../text_data";
+import { CloseButton } from "../../components";
 
 const MenuPopup = ({ close, container }) => {
   useGSAP(
@@ -29,21 +25,21 @@ const MenuPopup = ({ close, container }) => {
   return (
     <div
       ref={container}
-      className="fixed top-0 left-0 w-full sm:max-w-[375px] !z-[100] h-full"
+      className="fixed top-0 left-0 !z-[100] h-full w-full overflow-x-hidden hide-lg"
     >
-      <div className="gsap-menu-container bg-[--bg] text-[--white] w-full h-full overflow-y-auto flex flex-col gap-10 justify-between px-5 md:px-[2rem] text-xs">
-        <CloseBtn onClick={() => close()} />
+      <div className="gsap-menu-container bg-[--bg] text-[--white] h-full overflow-y-auto flex flex-col gap-8 justify-between px-3 md:px-[1.5em]">
+        <CloseButton container={container} onClick={() => close()} />
 
         <div>
           <div className="flex-y-4">
-            {MOBILE_MAIN_NAV.map((item, id) => (
+            {text_data.MOBILE_MAIN_NAV.map((item, id) => (
               <Link
                 key={id}
                 href={item.url}
-                className={`block uppercase text-2xl text-medium link ${
+                className={`block uppercase mobile-nav-link ${
                   pathname === `${item.url}`
-                    ? "font-bold text-white"
-                    : "text-white/70"
+                    ? "font-bold text-gradient"
+                    : "text-fg"
                 }`}
               >
                 {item.label}
@@ -51,39 +47,20 @@ const MenuPopup = ({ close, container }) => {
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-5 pb-[60px] md:pb-[70px] gap-2">
-          <div className="flex-y-4 col-span-2">
-            {MOBILE_NAV_FOOTER_1.map((item, id) => (
+        <div className="grid grid-cols-2 pb-5 md:pb-5 gap-y-1 gap-x-2">
+          {text_data.MOBILE_NAV_FOOTER.map((item, id) => (
+            <div key={id} className="col-span-1">
               <Link
-                key={id}
                 href={item.url}
                 className={`block uppercase sm link ${
-                  pathname === item.url
-                    ? "font-bold text-white"
-                    : "text-white/70"
+                  pathname === item.url ? "font-bold text-gradient" : "text-fg"
                 }`}
               >
                 {item.label}
               </Link>
-            ))}
-          </div>
-          <div className="flex-y-4 col-span-3">
-            {MOBILE_NAV_FOOTER_2.map((item, id) => (
-              <Link
-                key={id}
-                to={item.url}
-                className={`block uppercase sm link ${
-                  pathname === item.url
-                    ? "font-bold text-white"
-                    : "text-white/70"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-        <div className="h-[40px] md:h-[50px] border-t border-[--border] absolute bottom-0 left-0 w-full" />
       </div>
     </div>
   );

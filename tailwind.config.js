@@ -6,6 +6,7 @@ module.exports = {
   ],
   theme: {
     spacing: {
+      0: "0em",
       1: "0.5em",
       2: "1em",
       3: "1.5em",
@@ -17,18 +18,27 @@ module.exports = {
       9: "4.5em",
       10: "5em",
     },
+    borderRadius: {
+      none: "0",
+      sm: "0.5em",
+      DEFAULT: "1em",
+      md: "1.5em",
+      lg: "2em",
+      full: "50%",
+    },
     extend: {
       // You can add custom colors, animations, etc. here
       colors: {
         "dag-purple": "#7e3ff2", // sample brand color
 
-        neon: "var(--neon)",
-        "neon-from": "var(--neon-from)",
-        "neon-via": "var(--neon-via)",
-        "neon-to": "var(--neon-to)",
-        card: "var(--card)",
-        bg: "var(--bg)",
-        fg: "var(--fg)",
+        neon: "#39ff14",
+        "neon-from": "#adff2f",
+        "neon-via": "#39ff14",
+        "neon-to": "#00ff00",
+        card: "#1a1a1a",
+        dark: "#0a0a0a",
+        bg: "#000000",
+        fg: "#dedede",
       },
       fontFamily: {
         base: "var(--font-base)",

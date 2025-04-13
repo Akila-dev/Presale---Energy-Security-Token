@@ -5,7 +5,7 @@ const Logo = () => {
     <Link href="/" className={`block text-gradien text-white`}>
       <div className="flex-center">
         {/* <div className="w-4 h-4 bg-gradient-to-r from-[--neon-from] via-[--neon-via] to-[--neon-to] rounded-full shadow-neon" /> */}
-        <span className="icon-text font-black">Energy Security Token</span>
+        <span className="icon-text font-black font-display">ERGSEC</span>
       </div>
     </Link>
   );

@@ -1,4 +1,5 @@
 import { useRef } from "react";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -20,7 +21,7 @@ const MenuButton = ({ onClick }) => {
           width: 0,
         },
         {
-          width: 20,
+          width: "100%",
           duration: 1,
           stagger: 0.175,
           ease: "power2.out",
@@ -35,10 +36,14 @@ const MenuButton = ({ onClick }) => {
       onClick={onClick}
       className="flex items-center uppercase gap-2 pointer-events-auto"
     >
-      <div className="flex flex-col gap-0 w-[20px]">
-        <span className="menu-lines block h-[4px] w-[20px] border-t border-[--white]"></span>
-        <span className="menu-lines block h-[3px] w-[20px] border-t border-[--white]"></span>
-        <span className="menu-lines block h-[2px] w-[20px] border-b border-[--white]"></span>
+      <div className="flex flex-col gap-[0.3em] w-[1.5em]">
+        <span className="menu-lines block w-full !h-[0.1em] bg-white" />
+        <span className="menu-lines block w-full !h-[0.1em] bg-white" />
+        <span className="menu-lines block w-full !h-[0.1em] bg-white" />
+
+        {/* <span className="menu-lines block h-[0.3em] w-full border-t border-white"></span>
+        <span className="menu-lines block h-[0.2em] w-full border-t border-white"></span>
+        <span className="menu-lines block h-[0.1em] w-full border-b border-white"></span> */}
       </div>
       <span className="hidden md:block">Menu</span>
     </button>
