@@ -27,7 +27,7 @@ const MenuPopup = ({ close, container }) => {
       ref={container}
       className="fixed top-0 left-0 !z-[100] h-full w-full overflow-x-hidden hide-lg"
     >
-      <div className="gsap-menu-container bg-[--bg] text-[--white] h-full overflow-y-auto flex flex-col gap-8 justify-between px-3 md:px-[1.5em]">
+      <div className="gsap-menu-container bg-[--bg] text-[--white] h-full overflow-y-auto flex flex-col gap-6 justify-between px-3 md:px-[1.5em]">
         <CloseButton container={container} onClick={() => close()} />
 
         <div>
@@ -47,7 +47,7 @@ const MenuPopup = ({ close, container }) => {
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-2 pb-5 md:pb-5 gap-y-1 gap-x-2">
+        <div className="grid grid-cols-2 md:grid-cols-3 pb-5 md:pb-5 gap-y-1 gap-x-2">
           {text_data.MOBILE_NAV_FOOTER.map((item, id) => (
             <div key={id} className="col-span-1">
               <Link

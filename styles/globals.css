@@ -56,7 +56,8 @@ h5 {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   @apply font-semibold;
 }
 
@@ -70,7 +71,8 @@ h2,
   @apply text-[9vw] md:text-[5.5vw] lg:text-[3.75vw] leading-[120%];
 }
 
-h3 {
+h3,
+.h3 {
   @apply text-[6vw] md:text-[3vw] lg:text-[2vw];
 }
 
@@ -95,7 +97,9 @@ a,
 button,
 input,
 .p,
-div {
+div,
+label,
+textarea {
   @apply font-base text-[4vw] md:text-[1.8vw] lg:text-[1vw] leading-[150%] font-medium text-fg;
 }
 
@@ -119,11 +123,12 @@ div {
 
 .container-y,
 .container {
-  @apply py-[7em];
+  @apply py-[5em] lg:py-[6em];
 }
 
 .jumbotron {
-  @apply pt-[12em] pb-6 bg-dark flex flex-col items-center justify-center;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+  @apply pt-[8em] lg:pt-[12em] pb-10 bg-dark flex flex-col items-center justify-center;
 }
 
 .flex-center {
@@ -145,6 +150,14 @@ div {
 .max-w-text-2 {
   /* For Jumbotron */
   @apply md:max-w-[60vw] lg:max-w-[50vw];
+}
+
+.grid-2 {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7 lg:gap-[7em];
+}
+
+.grid-2-v2 {
+  @apply grid grid-cols-1 md:grid-cols-7 gap-5 md:gap-8 lg:gap-10;
 }
 
 .grid-3 {
@@ -196,4 +209,44 @@ div {
   @apply absolute translate-y-[-50%] translate-x-[-50%] top-[200px] left-[50%] w-[400px] h-[400px] rounded-full scale-0;
 }
 
-/* ! CARDS */
+/* ! FORM */
+.input-block {
+  @apply space-y-2;
+}
+
+label {
+  @apply text-[--black] font-medium;
+}
+
+input,
+.input,
+textarea {
+  @apply bg-card py-[0.85em] px-2 rounded outline-none border-none focus:ring-[0.1em] focus:ring-neon/50 backdrop-blur-md;
+}
+
+input::placeholder,
+textarea::placeholder {
+  @apply text-fg/50;
+}
+
+input,
+.input {
+  @apply w-full;
+}
+
+textarea {
+  @apply w-full min-h-[8em] resize-none;
+}
+
+.text-error {
+  @apply text-red-500;
+}
+
+.border-success {
+  @apply border-neon;
+}
+
+/* textarea:-webkit-autofill {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--black) !important;
+} */

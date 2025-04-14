@@ -5,7 +5,8 @@ h2 span,
 .icon_card-icon,
 .white-text-gradient,
 h1,
-h2 {
+h2,
+h3 {
   background: var(--to);
   background: linear-gradient(-90deg, var(--from) 0%, var(--to) 100%);
   background: -webkit-linear-gradient(-90deg, var(--from) 0%, var(--to) 100%);

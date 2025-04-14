@@ -1,18 +1,19 @@
 // pages/contact/index.js
 import React, { useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import Link from "next/link";
 
-import { Layout } from "../components";
+import {
+  Layout,
+  Jumbotron,
+  ContactForm,
+  Heading,
+  VerticalIconTextCard,
+} from "../components";
 
 // REACT ICONS
-import {
-  FaEnvelope,
-  FaPhone,
-  FaTelegramPlane,
-  FaDiscord,
-  FaLinkedinIn,
-  FaFacebookF,
-} from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+
+import text_data from "../text_data";
 
 export default function Contact() {
   const [captchaValue, setCaptchaValue] = useState(null);
@@ -33,181 +34,48 @@ export default function Contact() {
 
   return (
     <Layout>
-      {/* Page Background & Container */}
-      <section className="bg-gradient-to-b from-gray-900 to-black px-4 py-12">
-        <div className="max-w-7xl mx-auto">
-          {/* Title */}
-          <h2 className="text-4xl font-bold mb-8 text-white">
-            Contact &amp; Support
-          </h2>
+      {/* Jumbotron */}
+      <Jumbotron page="Contact" desc="Contact Support" pb_lg />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form Card */}
-            <div className="bg-gray-800 shadow-lg rounded-lg p-8">
-              <h3 className="text-3xl font-semibold mb-4 text-green-400">
-                Get in Touch
-              </h3>
-              <p className="text-lg mb-6 text-gray-300">
-                Have questions or need assistance? Fill out the form below, and
-                our support team will respond as soon as possible.
-              </p>
+      <section className="container-x grid-2 -mt-[7em] md:-mt-[6em] relative">
+        <ContactForm />
+        <div className="pt-3 md:pt-[9em] space-y-5">
+          <Heading
+            tag="contact us"
+            title="Don't Hesitate to Contact Us"
+            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            left
+          />
+          <div className="grid-2 !gap-3">
+            <VerticalIconTextCard
+              icon={<FaEnvelope />}
+              title="Email Us"
+              desc={text_data.CONTACT_DETAILS.mail}
+              href={`mailto:${text_data.CONTACT_DETAILS.mail}`}
+            />
+            <VerticalIconTextCard
+              icon={<FaPhoneAlt />}
+              title="Phone"
+              desc={text_data.CONTACT_DETAILS.phone}
+              href={`tel:${text_data.CONTACT_DETAILS.phone}`}
+            />
+          </div>
 
-              {/* Contact Form */}
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name & Email */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="flex flex-col">
-                    <label
-                      htmlFor="name"
-                      className="text-sm font-medium text-gray-400 mb-1"
-                    >
-                      Your Name
-                    </label>
-                    <input
-                      id="name"
-                      type="text"
-                      placeholder="John Doe"
-                      className="p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-green-500 transition text-gray-200"
-                      required
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <label
-                      htmlFor="email"
-                      className="text-sm font-medium text-gray-400 mb-1"
-                    >
-                      Your Email
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      placeholder="john@example.com"
-                      className="p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-green-500 transition text-gray-200"
-                      required
-                    />
-                  </div>
-                </div>
-
-                {/* Message */}
-                <div className="flex flex-col">
-                  <label
-                    htmlFor="message"
-                    className="text-sm font-medium text-gray-400 mb-1"
+          <div className="flex-v-center flex-wrap justify-between border-t border-card/20 pt-4">
+            <h3>Social Media:</h3>
+            <div className="flex-v-center !gap-1">
+              {text_data.CONTACT_DETAILS.social_media.map(
+                ({ link, icon }, i) => (
+                  <Link
+                    key={i}
+                    href={link}
+                    className="w-[3.5em] h-[3.5em] min-w-[3.5em] flex-center rounded-full bg-card hover:bg-dark hover:text-neon"
+                    target="_blank"
                   >
-                    Your Message
-                  </label>
-                  <textarea
-                    id="message"
-                    placeholder="How can we help you?"
-                    className="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-green-500 transition text-gray-200"
-                    rows="5"
-                    required
-                  ></textarea>
-                </div>
-
-                {/* ReCAPTCHA */}
-                <div className="mt-4">
-                  <ReCAPTCHA
-                    sitekey="YOUR_RECAPTCHA_SITE_KEY"
-                    onChange={handleCaptchaChange}
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="bg-green-600 text-white py-3 px-6 rounded hover:bg-green-700 transition font-medium"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-
-            {/* Support Channels */}
-            <div className="bg-gray-800 shadow-lg rounded-lg p-8">
-              <h3 className="text-3xl font-semibold mb-4 text-green-400">
-                Support Channels
-              </h3>
-              <p className="text-lg mb-6 text-gray-300">
-                Prefer another method? Reach us via any of these platforms:
-              </p>
-
-              <ul className="space-y-4 text-lg text-gray-300">
-                {/* Email */}
-                <li className="flex items-center gap-3">
-                  <FaEnvelope className="text-green-600" />
-                  <span>
-                    Email:{" "}
-                    <a
-                      href="mailto:support@ergsec.com"
-                      className="text-green-600 underline"
-                    >
-                      support@ergsec.com
-                    </a>
-                  </span>
-                </li>
-
-                {/* Phone */}
-                <li className="flex items-center gap-3">
-                  <FaPhone className="text-green-600" />
-                  <span>+123 456 7890</span>
-                </li>
-
-                {/* Telegram */}
-                <li className="flex items-center gap-3">
-                  <FaTelegramPlane className="text-green-600" />
-                  <span>
-                    <a
-                      href="https://t.me/ergsec_support"
-                      className="text-green-600 underline"
-                    >
-                      @ergsec_support
-                    </a>
-                  </span>
-                </li>
-
-                {/* Discord */}
-                <li className="flex items-center gap-3">
-                  <FaDiscord className="text-green-600" />
-                  <span>
-                    <a
-                      href="https://discord.gg/ergsec"
-                      className="text-green-600 underline"
-                    >
-                      Join Our Server
-                    </a>
-                  </span>
-                </li>
-
-                {/* LinkedIn */}
-                <li className="flex items-center gap-3">
-                  <FaLinkedinIn className="text-green-600" />
-                  <span>
-                    <a
-                      href="https://www.linkedin.com/company/ergsec"
-                      className="text-green-600 underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      LinkedIn
-                    </a>
-                  </span>
-                </li>
-
-                {/* Facebook */}
-                <li className="flex items-center gap-3">
-                  <FaFacebookF className="text-green-600" />
-                  <span>
-                    <a
-                      href="https://www.facebook.com/ergsec"
-                      className="text-green-600 underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Facebook
-                    </a>
-                  </span>
-                </li>
-              </ul>
+                    <span className="text-[1.5em]">{icon}</span>
+                  </Link>
+                )
+              )}
             </div>
           </div>
         </div>

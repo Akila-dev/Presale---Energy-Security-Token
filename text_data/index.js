@@ -6,7 +6,7 @@ import {
   // MOBILE_NAV_FOOTER_2,
 } from "./navigation_links";
 
-import { CONTACT_DETAILS } from "./site_data";
+import { CONTACT_DETAILS } from "./site_data.jsx";
 
 import { WHY_CHOOSE_US } from "./home_text";
 

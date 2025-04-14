@@ -89,14 +89,25 @@ export const MOBILE_MAIN_NAV = [
     label: "About",
   },
   {
-    url: "tokenomics",
+    url: "/token-sale",
+    label: "Token Sale",
+  },
+  {
+    url: "/tokenomics",
     label: "Tokenomics",
   },
   {
     url: "/roadmap",
     label: "Roadmap",
   },
-
+  {
+    url: "/how-to-buy",
+    label: "How To Buy/FAQ",
+  },
+  {
+    url: "/blog",
+    label: "Blog",
+  },
   {
     url: "/contact",
     label: "Contact",
@@ -109,24 +120,31 @@ export const MOBILE_NAV_FOOTER = [
     label: "Documentation",
   },
   {
-    url: "/whitepaper",
+    url: "/documentation/audit-reports",
+    label: "Audit Reports",
+  },
+
+  {
+    url: "/documentation/whitepaper",
     label: "Whitepaper",
   },
   {
-    url: "/buying-guide",
-    label: "How To Buy",
-  },
-  {
-    url: "/litepaper",
+    url: "/documentation/litepaper",
     label: "Litepaper",
   },
+
   {
-    url: "/blog",
-    label: "Blog",
+    url: "/documentation/legal-disclaimers",
+    label: "Legal Disclaimers",
   },
   {
-    url: "/media-kit",
-    label: "Media Kit",
+    url: "/documentation/token-purchase-agreement",
+    label: "Token Purchase Agreement",
+  },
+
+  {
+    url: "/documentation/risk-disclosures",
+    label: "Risk Disclosures",
   },
 ];
 

@@ -10,7 +10,7 @@ export default function TokenSale() {
       <Jumbotron page="Token Sale" desc="Token Sale Details" />
 
       {/* Pre-Sale Details Section */}
-      <section className="container grid grid-cols-1 md:grid-cols-2 gap-[7em]">
+      <section className="container grid-2">
         <div className="col-span-1">
           <Heading
             tag="Pre-Sale"
@@ -57,7 +57,7 @@ export default function TokenSale() {
       </section>
 
       {/* Main Sale Details Section */}
-      <section className="container grid grid-cols-1 md:grid-cols-2 gap-[7em] dark-gradient">
+      <section className="container grid-2 dark-gradient">
         <div className="col-span-1">
           <Heading
             tag="Main Sale"

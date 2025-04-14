@@ -9,11 +9,11 @@ export default function About() {
       <Jumbotron page="About" desc="Project Overview" />
 
       {/* Mission & Vision Section */}
-      <section className="container grid grid-cols-1 md:grid-cols-7 gap-10">
+      <section className="container grid-2-v2">
         <div className="col-span-1 md:col-span-3">
           <Heading tag="Our Mission" title="Mission & Vision" left />
         </div>
-        <p className="col-span-1 md:col-span-4 text-[1.2em] flex flex-col gap-2">
+        <p className="col-span-1 md:col-span-4 lg:text-[1.2em] flex flex-col gap-2">
           <span>
             Our mission is to accelerate the global transition to sustainable
             energy by providing transparent, secure, and accessible investment

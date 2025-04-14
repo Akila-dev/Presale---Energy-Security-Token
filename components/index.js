@@ -21,12 +21,19 @@ export { default as Jumbotron } from "./text/Jumbotron";
 
 // Cards
 export { default as IconTextCard } from "./cards/IconTextCard";
+export { default as VerticalIconTextCard } from "./cards/VerticalIconTextCard";
 export { default as CTACard } from "./cards/CTACard";
 export { default as ContactCTACard } from "./cards/ContactCTACard";
 export { default as TeamCard } from "./cards/TeamCard";
 
 // Sections
 export { default as MeetTheTeam } from "./sections/MeetTheTeam";
+export { default as ContactForm } from "./sections/ContactForm";
 
 // Icons
 export { default as NeonGradientIcon } from "./icons/NeonGradientIcon";
+
+// Form
+export { default as InputFieldRHF } from "./form/InputFieldRHF";
+export { default as SubmitButton } from "./form/SubmitButton";
+export { default as FormMessage } from "./form/FormMessage";
