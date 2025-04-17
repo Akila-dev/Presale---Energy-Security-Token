@@ -29,6 +29,9 @@ export { default as TeamCard } from "./cards/TeamCard";
 // Sections
 export { default as MeetTheTeam } from "./sections/MeetTheTeam";
 export { default as ContactForm } from "./sections/ContactForm";
+export { default as TextAndDetailsList } from "./sections/TextAndDetailsList";
+export { default as DetailsList } from "./sections/DetailsList";
+export { default as Roadmap } from "./sections/Roadmap";
 
 // Icons
 export { default as NeonGradientIcon } from "./icons/NeonGradientIcon";

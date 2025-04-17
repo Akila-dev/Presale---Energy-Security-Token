@@ -6,7 +6,10 @@ h2 span,
 .white-text-gradient,
 h1,
 h2,
-h3 {
+h3,
+.inner-html b,
+.inner-html strong,
+.inner-html i {
   background: var(--to);
   background: linear-gradient(-90deg, var(--from) 0%, var(--to) 100%);
   background: -webkit-linear-gradient(-90deg, var(--from) 0%, var(--to) 100%);
@@ -18,7 +21,10 @@ h3 {
 .text-gradient,
 h1 span,
 h2 span,
-.icon_card-icon {
+.icon_card-icon,
+.inner-html b,
+.inner-html strong,
+.inner-html i {
   --from: var(--neon-from);
   --to: var(--neon-to);
 }
@@ -35,6 +41,7 @@ h3 {
 .card-gradient,
 .dark-gradient,
 .dark-gradient-2,
+.link-card,
 .light-gradient,
 .jumbotron,
 .tag {
@@ -54,14 +61,16 @@ h3 {
   --to: var(--card);
 }
 
-.dark-gradient {
+.dark-gradient,
+.link-card {
   --from: var(--dark);
   --to: var(--bg);
   /* @apply backdrop-filter backdrop-blur-lg; */
 }
 
 .dark-gradient-2,
-.jumbotron {
+.jumbotron,
+.link-card:hover {
   --from: var(--bg);
   --to: var(--dark);
   /* @apply backdrop-filter backdrop-blur-lg; */

@@ -37,7 +37,7 @@ export default function Contact() {
       {/* Jumbotron */}
       <Jumbotron page="Contact" desc="Contact Support" pb_lg />
 
-      <section className="container-x grid-2 -mt-[7em] md:-mt-[6em] relative">
+      <section className="container-x grid-2 -mt-[7em] relative">
         <ContactForm />
         <div className="pt-3 md:pt-[9em] space-y-5">
           <Heading
@@ -46,7 +46,7 @@ export default function Contact() {
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             left
           />
-          <div className="grid-2 !gap-3">
+          <div className="gsap-card-group grid-2 !gap-3">
             <VerticalIconTextCard
               icon={<FaEnvelope />}
               title="Email Us"

@@ -28,6 +28,14 @@ export const NAV_LINKS = [
         label: "Documentation",
       },
       {
+        url: "/whitepaper",
+        label: "Whitepaper",
+      },
+      {
+        url: "/litepaper",
+        label: "Litepaper",
+      },
+      {
         url: "/audit-reports",
         label: "Audit Reports",
       },
@@ -35,10 +43,7 @@ export const NAV_LINKS = [
         url: "/legal-disclaimers",
         label: "Legal Disclaimers",
       },
-      {
-        url: "/litepaper",
-        label: "Litepaper",
-      },
+
       {
         url: "/risk-disclosures",
         label: "Risk Disclosures",
@@ -46,10 +51,6 @@ export const NAV_LINKS = [
       {
         url: "/token-purchase-agreement",
         label: "Token Purchase Agreement",
-      },
-      {
-        url: "/whitepaper",
-        label: "Whitepaper",
       },
     ],
   },
@@ -114,6 +115,7 @@ export const MOBILE_MAIN_NAV = [
   },
 ];
 
+// ! NOTE: USED IN MOBILE NAVIGATION
 export const MOBILE_NAV_FOOTER = [
   {
     url: "/documentation",
@@ -148,32 +150,36 @@ export const MOBILE_NAV_FOOTER = [
   },
 ];
 
-// export const MOBILE_NAV_FOOTER_1 = [
-//   {
-//     url: "/documentation",
-//     label: "Documentation",
-//   },
-//   {
-//     url: "/buying-guide",
-//     label: "How To Buy",
-//   },
-//   {
-//     url: "/blog",
-//     label: "Blog",
-//   },
-// ];
-
-// export const MOBILE_NAV_FOOTER_2 = [
-//   {
-//     url: "/whitepaper",
-//     label: "Whitepaper",
-//   },
-//   {
-//     url: "/litepaper",
-//     label: "Litepaper",
-//   },
-//   {
-//     url: "/media-kit",
-//     label: "Media Kit",
-//   },
-// ];
+// ! NOTE: USED IN DOCUMENTATION PAGE
+export const DOCUMENTATION_LINKS = [
+  {
+    url: "/documentation/whitepaper",
+    label: "Whitepaper",
+    desc: "Full Technical & Business Overview",
+  },
+  {
+    url: "/documentation/litepaper",
+    label: "Litepaper",
+    desc: "Technical Paper",
+  },
+  {
+    url: "/documentation/audit-reports",
+    label: "Audit Reports",
+    desc: "Third-Party Audit Insights",
+  },
+  {
+    url: "/documentation/legal-disclaimers",
+    label: "Legal Disclaimers",
+    desc: "Terms & Conditions",
+  },
+  {
+    url: "/documentation/risk-disclosures",
+    label: "Risk Disclosures",
+    desc: "Know the Risks",
+  },
+  {
+    url: "/documentation/token-purchase-agreement",
+    label: "Token Purchase Agreement",
+    desc: "Purchase Terms & Conditions",
+  },
+];
