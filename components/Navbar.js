@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 
 import { SiMaildotru } from "react-icons/si";
-import { Logo, ToggleButton, Navigation, MenuButton, MenuPopup } from ".";
+import { Logo, Navigation, MenuButton, MenuPopup, SocialIcons } from ".";
 import text_data from "../text_data";
 
 import gsap from "gsap";
@@ -31,7 +31,7 @@ export default function Navbar() {
     <>
       <header
         ref={container}
-        className="fixed top-0 left-0  w-full !bg-bg border-b-[0.1em] border-fg/10 shadow shadow-card/50"
+        className="fixed top-0 left-0  w-full !bg-bg border-b-[0.1em] border-fg/10 shadow shadow-card/50 z-[10000]"
       >
         <div className="container-x py-2 lg:py-3 flex-between lg:border-b-[0.1em] lg:border-fg/10 text-white">
           <div className="flex-1 show-md">
@@ -48,7 +48,7 @@ export default function Navbar() {
             <Logo />
           </div>
           <div className="flex-1 flex justify-end show-lg">
-            <ToggleButton />
+            <SocialIcons small />
           </div>
           <div className="flex-1 flex justify-end hide-lg">
             <MenuButton onClick={() => setShowMenu(true)} />

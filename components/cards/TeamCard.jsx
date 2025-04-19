@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const TeamCard = ({ img, name, position, education, experience }) => {
   return (
-    <div className="gsap-card-single space-y-3 p-3 dark-gradient rounded-lg shadow shadow-card">
+    <div className="space-y-3 p-3 dark-gradient rounded-lg shadow shadow-card">
       {/* Image */}
 
       <Image

@@ -7,8 +7,8 @@ import {
   Heading,
   IconTextCard,
   CTACard,
-  ContactCTACard,
   MeetTheTeam,
+  CardDiv,
 } from "../components";
 import text_data from "../text_data";
 
@@ -24,11 +24,11 @@ export default function Home() {
           title="Why Choose Our Project?"
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
-        <div className="gsap-card-group grid-3">
+        <CardDiv animation="slide-in" start="85%" className="grid-3">
           {text_data.WHY_CHOOSE_US.map(({ icon, title, desc }, i) => (
             <IconTextCard key={i} icon={icon} title={title} desc={desc} />
           ))}
-        </div>
+        </CardDiv>
       </section>
       {/* ! TOKENOMICS AND TOKEN SALES CALL TO ACTION */}
       <section className="container-x">
@@ -55,10 +55,6 @@ export default function Home() {
       {/* ! MEET THE TEAM */}
       <section className="container">
         <MeetTheTeam showAboutLink />
-      </section>
-      {/* ! CONTACT US CALL TO ACTION */}
-      <section className="container-x">
-        <ContactCTACard />
       </section>
     </Layout>
   );

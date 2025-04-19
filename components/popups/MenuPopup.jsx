@@ -25,7 +25,7 @@ const MenuPopup = ({ close, container }) => {
   return (
     <div
       ref={container}
-      className="fixed top-0 left-0 !z-[100] h-full w-full overflow-x-hidden hide-lg"
+      className="fixed top-0 left-0 !z-[10000] h-full w-full overflow-x-hidden hide-lg"
     >
       <div className="gsap-menu-container bg-[--bg] text-[--white] h-full overflow-y-auto flex flex-col gap-6 justify-between px-3 md:px-[1.5em]">
         <CloseButton container={container} onClick={() => close()} />

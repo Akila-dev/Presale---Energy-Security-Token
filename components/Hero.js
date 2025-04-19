@@ -1,7 +1,7 @@
 // components/Hero.js
 import { useRef } from "react";
 
-import { Button, CountDown } from "../components";
+import { Button, CountDown, TextDiv } from "../components";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -27,7 +27,7 @@ export default function Hero() {
         style={{ backgroundImage: "url('/images/bg-lines.png')" }}
       />
       <div className="radial-dark-overlay w-full h-full flex-center">
-        <div
+        <TextDiv
           ref={container}
           className="gsap-hero-container container-x max-w-full md:max-w-[90vw] lg:max-w-[65vw] relative flex-center flex-col !gap-3 pt-6 lg:pt-10"
         >
@@ -43,7 +43,7 @@ export default function Hero() {
           <div className="flex-center mt-1">
             <CountDown time="2025-04-21T06:20:35" />
           </div>
-        </div>
+        </TextDiv>
       </div>
     </div>
   );

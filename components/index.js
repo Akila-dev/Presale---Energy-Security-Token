@@ -3,7 +3,6 @@ export { default as Footer } from "./Footer";
 export { default as Navbar } from "./Navbar";
 export { default as Hero } from "./Hero";
 export { default as Layout } from "./Layout";
-export { default as CountDown } from "./CountDown";
 
 // Buttons
 export { default as MenuButton } from "./buttons/MenuButton";
@@ -23,15 +22,18 @@ export { default as Jumbotron } from "./text/Jumbotron";
 export { default as IconTextCard } from "./cards/IconTextCard";
 export { default as VerticalIconTextCard } from "./cards/VerticalIconTextCard";
 export { default as CTACard } from "./cards/CTACard";
-export { default as ContactCTACard } from "./cards/ContactCTACard";
 export { default as TeamCard } from "./cards/TeamCard";
+export { default as RiskCard } from "./cards/RiskCard";
 
 // Sections
+export { default as CountDown } from "./sections/CountDown";
 export { default as MeetTheTeam } from "./sections/MeetTheTeam";
 export { default as ContactForm } from "./sections/ContactForm";
 export { default as TextAndDetailsList } from "./sections/TextAndDetailsList";
 export { default as DetailsList } from "./sections/DetailsList";
 export { default as Roadmap } from "./sections/Roadmap";
+export { default as Documentation } from "./sections/Documentation";
+export { default as SocialIcons } from "./sections/SocialIcons";
 
 // Icons
 export { default as NeonGradientIcon } from "./icons/NeonGradientIcon";
@@ -40,3 +42,7 @@ export { default as NeonGradientIcon } from "./icons/NeonGradientIcon";
 export { default as InputFieldRHF } from "./form/InputFieldRHF";
 export { default as SubmitButton } from "./form/SubmitButton";
 export { default as FormMessage } from "./form/FormMessage";
+
+// Wrappers
+export { default as CardDiv } from "./wrappers/CardDiv";
+export { default as TextDiv } from "./wrappers/TextDiv";

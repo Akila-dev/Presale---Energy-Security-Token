@@ -235,3 +235,22 @@ h3 {
   box-sizing: inherit;
   -webkit-tap-highlight-color: transparent;
 }
+
+/* * TEXT */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-kerning: none;
+}
+
+.char,
+.word,
+.line,
+.inherit {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}

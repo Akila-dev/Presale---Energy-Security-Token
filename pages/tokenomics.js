@@ -1,7 +1,13 @@
 // pages/tokenomics.js
 import React from "react";
 
-import { Layout, Jumbotron, Heading, TextAndDetailsList } from "../components";
+import {
+  Layout,
+  Jumbotron,
+  Heading,
+  TextAndDetailsList,
+  TextDiv,
+} from "../components";
 import text_data from "../text_data";
 
 export default function Tokenomics() {
@@ -16,14 +22,14 @@ export default function Tokenomics() {
           <Heading tag="About Token" title="The ERGSEC token" left />
         </div>
         <div className="col-span-1 flex flex-col gap-1">
-          <p className="lg:text-[1.4em]">
+          <TextDiv className="lg:text-[1.4em]">
             The ERGSEC token is strategically designed as a financial instrument
             to advance renewable energy infrastructure projects, reward
             stakeholder engagement, and transparently distribute profits from
             energy generation and sales. By linking token issuance directly to
             clearly defined developmental milestones, we ensure sustainable
             growth and investor confidence.
-          </p>
+          </TextDiv>
         </div>
       </section>
 
@@ -37,13 +43,13 @@ export default function Tokenomics() {
           />
         </div>
         <div className="col-span-1 flex flex-col gap-1 md:pt-3">
-          <p className="lg:text-[1.4em]">
+          <TextDiv className="lg:text-[1.4em]">
             A fixed total of{" "}
             <strong className="text-gradient">10,000,000 ERGSEC tokens</strong>{" "}
             will be minted progressively in alignment with critical project
             milestones. Token issuance is phased, ensuring responsible financial
             management and clear accountability at every stage.
-          </p>
+          </TextDiv>
         </div>
       </section>
 

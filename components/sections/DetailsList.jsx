@@ -1,5 +1,6 @@
 import React from "react";
 
+import { CardDiv } from "../../components";
 import { BsPinFill } from "react-icons/bs";
 
 const DetailsListCard = ({
@@ -46,7 +47,10 @@ const DetailsListCard = ({
 
 const DetailsList = ({ data, two_colums }) => {
   return (
-    <div
+    <CardDiv
+      animation="slide-in"
+      start="85%"
+      scrub
       className={`!gap-5 ${
         two_colums ? "grid-2" : "flex flex-col items-start"
       }`}
@@ -60,7 +64,7 @@ const DetailsList = ({ data, two_colums }) => {
           colorful_description={colorful_description}
         />
       ))}
-    </div>
+    </CardDiv>
   );
 };
 

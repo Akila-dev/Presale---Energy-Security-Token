@@ -1,7 +1,7 @@
 // pages/documentation/index.js
 import React from "react";
 import Link from "next/link";
-import { Layout, Jumbotron } from "../../components";
+import { Layout, Jumbotron, CardDiv } from "../../components";
 import text_data from "../../text_data";
 
 export default function Documentation() {
@@ -17,12 +17,16 @@ export default function Documentation() {
         pb_md
       />
 
-      <section className="container grid-2 !gap-3 lg:!gap-5 -mt-3">
+      <CardDiv
+        animation="slide-in"
+        start="85%"
+        className="container grid-2 !gap-3 lg:!gap-5 -mt-3"
+      >
         {text_data.DOCUMENTATION_LINKS.map(({ url, label, desc }, index) => (
           <Link
             href={url}
             key={index}
-            className="gsap-card-single link-card hover:!bg-dark backdrop-blur-lg flex flex-col gap-1 lg:gap-2 p-3 rounded border border-dark "
+            className="link-card hover:!bg-dark backdrop-blur-lg flex flex-col gap-1 lg:gap-2 p-3 rounded border border-dark "
           >
             <span className="text-[1.4em] lg:text-[1.7em] text-gradient">
               {label}
@@ -30,7 +34,7 @@ export default function Documentation() {
             <span>{desc}</span>
           </Link>
         ))}
-      </section>
+      </CardDiv>
     </Layout>
   );
 }

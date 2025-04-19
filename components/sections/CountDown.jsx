@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import { CardDiv } from "../../components";
+
 const getTimeLeft = (time) => {
   const COUNTDOWN_TARGET = new Date(time);
   const totalTimeLeft = COUNTDOWN_TARGET - new Date();
@@ -25,7 +27,12 @@ const Countdown = ({ time }) => {
   }, [time]);
 
   return (
-    <div className="flex items-center justify-center gap-[0.7em] md:gap-2">
+    <CardDiv
+      animation="slide-in"
+      start="85%"
+      once
+      className="flex items-center justify-center gap-[0.7em] md:gap-2"
+    >
       {Object.entries(timeLeft).map((el) => {
         const label = el[0];
         const value = el[1];
@@ -42,7 +49,7 @@ const Countdown = ({ time }) => {
           </div>
         );
       })}
-    </div>
+    </CardDiv>
   );
 };
 

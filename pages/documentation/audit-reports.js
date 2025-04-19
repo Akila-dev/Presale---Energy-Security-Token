@@ -1,18 +1,23 @@
 // pages/documentation/audit-reports.js
 import React from "react";
 
-import { Layout } from "../../components";
+import { Layout, Jumbotron, Documentation } from "../../components";
+
+import text_data from "../../text_data";
 
 export default function AuditReports() {
   return (
     <Layout>
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <h2 className="text-4xl font-bold mb-6">Audit Reports</h2>
-        <p className="text-lg">
-          Xxxx xxx xxxx. This section contains external audit reports that
-          verify the project's code, financials, and overall security.
-        </p>
-      </section>
+      {/* Jumbotron */}
+      <Jumbotron
+        page="Audit Reports"
+        desc="Renewable Energy Security Audit Reports"
+      />
+      {/* Documentation */}
+      <Documentation
+        data={text_data.AUDIT_REPORTS_DOCS}
+        commentary="Xxxx xxx xxxx. This section contains external audit reports that verify the project's code, financials, and overall security."
+      />
     </Layout>
   );
 }

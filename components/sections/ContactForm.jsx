@@ -4,7 +4,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 
-import { InputFieldRHF, FormMessage, SubmitButton } from "../../components";
+import {
+  InputFieldRHF,
+  FormMessage,
+  SubmitButton,
+  CardDiv,
+} from "../../components";
 
 const ContactSchema = z.object({
   name: z.string().min(1, { message: "Required" }),
@@ -72,7 +77,11 @@ const ContactForm = () => {
         onSubmit={handleSubmit((d) => onSubmit(d))}
         className={`w-full ${isPending && "pending"} space-y-4`}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <CardDiv
+          animation="slide-in"
+          start="85%"
+          className="grid grid-cols-1 md:grid-cols-2 gap-3"
+        >
           <InputFieldRHF
             label="Name"
             type="text"
@@ -103,7 +112,7 @@ const ContactForm = () => {
             error={errors.message?.message}
             additionalClassName="md:col-span-2"
           />
-        </div>
+        </CardDiv>
 
         {error && <FormMessage message={error} type="error" />}
         {success && <FormMessage message={success} type="success" />}

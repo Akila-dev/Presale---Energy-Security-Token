@@ -49,7 +49,7 @@ export const NAV_LINKS = [
         label: "Risk Disclosures",
       },
       {
-        url: "/token-purchase-agreement",
+        url: "/token-purchase-agreements",
         label: "Token Purchase Agreement",
       },
     ],
@@ -140,7 +140,7 @@ export const MOBILE_NAV_FOOTER = [
     label: "Legal Disclaimers",
   },
   {
-    url: "/documentation/token-purchase-agreement",
+    url: "/documentation/token-purchase-agreements",
     label: "Token Purchase Agreement",
   },
 
@@ -178,7 +178,7 @@ export const DOCUMENTATION_LINKS = [
     desc: "Know the Risks",
   },
   {
-    url: "/documentation/token-purchase-agreement",
+    url: "/documentation/token-purchase-agreements",
     label: "Token Purchase Agreement",
     desc: "Purchase Terms & Conditions",
   },

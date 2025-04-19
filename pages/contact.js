@@ -1,6 +1,5 @@
 // pages/contact/index.js
 import React, { useState } from "react";
-import Link from "next/link";
 
 import {
   Layout,
@@ -8,6 +7,8 @@ import {
   ContactForm,
   Heading,
   VerticalIconTextCard,
+  CardDiv,
+  SocialIcons,
 } from "../components";
 
 // REACT ICONS
@@ -37,7 +38,7 @@ export default function Contact() {
       {/* Jumbotron */}
       <Jumbotron page="Contact" desc="Contact Support" pb_lg />
 
-      <section className="container-x grid-2 -mt-[7em] relative">
+      <section className="container-x grid-2 -mt-[7em] relative pb-10">
         <ContactForm />
         <div className="pt-3 md:pt-[9em] space-y-5">
           <Heading
@@ -46,7 +47,7 @@ export default function Contact() {
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             left
           />
-          <div className="gsap-card-group grid-2 !gap-3">
+          <CardDiv animation="slide-in" start="90%" className="grid-2 !gap-3">
             <VerticalIconTextCard
               icon={<FaEnvelope />}
               title="Email Us"
@@ -59,24 +60,11 @@ export default function Contact() {
               desc={text_data.CONTACT_DETAILS.phone}
               href={`tel:${text_data.CONTACT_DETAILS.phone}`}
             />
-          </div>
+          </CardDiv>
 
           <div className="flex-v-center flex-wrap justify-between border-t border-card/20 pt-4">
             <h3>Social Media:</h3>
-            <div className="flex-v-center !gap-1">
-              {text_data.CONTACT_DETAILS.social_media.map(
-                ({ link, icon }, i) => (
-                  <Link
-                    key={i}
-                    href={link}
-                    className="w-[3.5em] h-[3.5em] min-w-[3.5em] flex-center rounded-full bg-card hover:bg-dark hover:text-neon"
-                    target="_blank"
-                  >
-                    <span className="text-[1.5em]">{icon}</span>
-                  </Link>
-                )
-              )}
-            </div>
+            <SocialIcons />
           </div>
         </div>
       </section>

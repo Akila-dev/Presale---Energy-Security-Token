@@ -1,5 +1,7 @@
 import React from "react";
 
+import { TextDiv } from "../../components";
+
 const Heading = ({ tag, title, desc, left }) => {
   return (
     <div
@@ -7,7 +9,7 @@ const Heading = ({ tag, title, desc, left }) => {
         left ? "md:!justify-start" : "md:!justify-center"
       }`}
     >
-      <div
+      <TextDiv
         className={`flex-center flex-col max-w-text !items-start text-left ${
           left
             ? "md:!items-start !text-left"
@@ -21,7 +23,7 @@ const Heading = ({ tag, title, desc, left }) => {
         )}
         <h2 className="">{title}</h2>
         {desc && <p>{desc}</p>}
-      </div>
+      </TextDiv>
     </div>
   );
 };
