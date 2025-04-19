@@ -18,10 +18,10 @@ export default function Roadmap() {
         <Heading
           tag="Roadmap"
           title="Roadmap"
-          desc="Our development roadmap outlines the detailed progression through
+          desc={`<span>Our development roadmap</span> outlines the detailed progression through
           strategic milestones, clearly defined phases, and measurable goals,
           guiding us towards building a decentralized renewable energy ecosystem
-          powered by the ERGSEC security token."
+          powered by the ERGSEC security token.`}
         />
         <RoadmapComponent data={text_data.ROADMAP_DATA} />
       </section>

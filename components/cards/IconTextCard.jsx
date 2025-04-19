@@ -12,7 +12,10 @@ const IconTextCard = ({ icon, title, desc, className }) => {
           {/* {icon} */}
         </div>
         <h3 className="card-title text-center">{title}</h3>
-        <p>{desc}</p>
+        <p
+          className={`inner-html`}
+          dangerouslySetInnerHTML={{ __html: desc }}
+        />
       </div>
     </div>
   );

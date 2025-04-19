@@ -22,7 +22,12 @@ const Heading = ({ tag, title, desc, left }) => {
           </div>
         )}
         <h2 className="">{title}</h2>
-        {desc && <p>{desc}</p>}
+        {desc && (
+          <p
+            className={`inner-html`}
+            dangerouslySetInnerHTML={{ __html: desc }}
+          />
+        )}
       </TextDiv>
     </div>
   );

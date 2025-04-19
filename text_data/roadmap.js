@@ -21,26 +21,26 @@ export const ROADMAP_DATA = [
       "Commence legal procedures to transition ERGSEC tokens to a fully regulated MiFID II compliant security token.",
     ],
   },
-  {
-    date: "Q4 2025",
-    label: "Permits and Construction of First Renewable Energy Power Station",
-    description: "",
-    list: [
-      "Secure necessary local and regional permits for renewable energy generation facility.",
-      "Initiate groundbreaking and construction activities for initial solar/wind power generation infrastructure.",
-      "Implement rigorous project oversight and environmental compliance standards.",
-    ],
-  },
-  {
-    date: "Q1 2026",
-    label: "Station and Battery System Validation Phase",
-    description: "",
-    list: [
-      "Complete construction of the first renewable energy station including advanced battery storage systems.",
-      "Conduct thorough testing and validation of energy output, grid integration, storage efficiency, and safety compliance.",
-      "Obtain final regulatory certifications and operational clearances.",
-    ],
-  },
+  // {
+  //   date: "Q4 2025",
+  //   label: "Permits and Construction of First Renewable Energy Power Station",
+  //   description: "",
+  //   list: [
+  //     "Secure necessary local and regional permits for renewable energy generation facility.",
+  //     "Initiate groundbreaking and construction activities for initial solar/wind power generation infrastructure.",
+  //     "Implement rigorous project oversight and environmental compliance standards.",
+  //   ],
+  // },
+  // {
+  //   date: "Q1 2026",
+  //   label: "Station and Battery System Validation Phase",
+  //   description: "",
+  //   list: [
+  //     "Complete construction of the first renewable energy station including advanced battery storage systems.",
+  //     "Conduct thorough testing and validation of energy output, grid integration, storage efficiency, and safety compliance.",
+  //     "Obtain final regulatory certifications and operational clearances.",
+  //   ],
+  // },
   {
     date: "Q2 2026",
     label: "Energy Production Begins, Generating Initial Revenues",

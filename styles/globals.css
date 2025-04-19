@@ -215,7 +215,7 @@ textarea {
 }
 
 .footer-group {
-  @apply flex flex-col gap-2 lg:gap-3;
+  @apply flex flex-col gap-2;
 }
 
 .footer-group h3,
@@ -224,7 +224,7 @@ textarea {
 }
 
 .footer-link {
-  @apply text-white hover:text-neon hover:scale-110 uppercase;
+  @apply text-white hover:text-neon uppercase;
 }
 
 /* ! FORM */
