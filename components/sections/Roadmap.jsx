@@ -1,4 +1,11 @@
-import React from "react";
+import { useRef } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const RoadmapCard = ({ date, label, description, list }) => (
   <div className="bg-dark/50 rounded border-[0.1em] border-dark max-w-[25em] p-2 md:p-3 space-y-1">
@@ -18,12 +25,39 @@ const RoadmapCard = ({ date, label, description, list }) => (
 );
 
 const Roadmap = ({ data }) => {
+  const container = useRef();
+  const tl = useRef();
+
+  useGSAP(
+    () => {
+      // ANIMATIONS TRIGGERED BY THE CONTAINER
+      tl.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: container.current,
+            start: "top 50%",
+            end: "bottom 50%",
+            scrub: 0.2,
+          },
+          defaults: { ease: "none" },
+        })
+        .to(".gsap-timeline-neon-line", {
+          height: "100%",
+          ease: "none",
+        });
+    },
+    { scope: container, revertOnUpdate: true }
+  );
+
   return (
-    <div className="grid-2 w-full md:!gap-x-[8em] lg:!gap-x-[12em] !gap-y-4 md:gap-y-2 relative py-3 md:py-12 pl-3 md:pl-0">
+    <div
+      ref={container}
+      className="grid-2 w-full md:!gap-x-[8em] lg:!gap-x-[12em] !gap-y-4 md:gap-y-2 relative py-3 md:py-12 pl-3 md:pl-0"
+    >
       {/* LINES & TOP&BOTTOM DOTS */}
       <div className="timeline-line-pos w-[0.1em] h-full bg-card" />{" "}
       {/* LINE BELOW */}
-      <div className="timeline-line-pos w-[0.1em] h-0 bg-neon" />{" "}
+      <div className="gsap-timeline-neon-line timeline-line-pos w-[0.1em] h-0 bg-neon" />{" "}
       {/* LINE NEON */}
       <div className={`timeline-dot hidden md:block timeline-line-pos`} />{" "}
       {/* TOP DOT */}

@@ -47,7 +47,12 @@ export default function Contact() {
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             left
           />
-          <CardDiv animation="slide-in" start="90%" className="grid-2 !gap-3">
+          <CardDiv
+            animation="slide-in"
+            once
+            start="90%"
+            className="grid-2 !gap-3"
+          >
             <VerticalIconTextCard
               icon={<FaEnvelope />}
               title="Email Us"
